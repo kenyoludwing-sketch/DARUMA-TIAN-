@@ -5,123 +5,33 @@
 <style>
   body {
     display: flex;
-    flex-direction: column; /* Para apilar elementos verticalmente */
+    flex-direction: column; /* Para que los elementos se apilen verticalmente */
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffebee; /* Rosa muy claro, casi blanco */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #d81b60; /* Rojo oscuro para el texto */
-    margin: 0;
-    overflow: hidden; /* Para evitar barras de desplazamiento */
-  }
-
-  .heart-container {
-    position: relative;
-    width: 200px;
-    height: 180px;
-    margin-bottom: 30px; /* Espacio entre el corazón y el beso */
-    transform: scale(0); /* Inicia invisible */
-    animation: popIn 1s forwards; /* Animación para que aparezca */
-    animation-delay: 0.5s; /* Pequeño retraso */
-  }
-
-  .heart {
-    position: absolute;
-    width: 100px;
-    height: 160px;
-    background-color: #e91e63; /* Rojo corazón */
-    border-radius: 50px 50px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-  }
-
-  .heart::before,
-  .heart::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 160px;
-    background-color: #e91e63; /* Rojo corazón */
-    border-radius: 50px 50px 0 0;
-  }
-
-  .heart::before {
-    left: 90px;
-    transform: rotate(90deg);
-    transform-origin: 0 100%;
-  }
-
-  .heart-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white; /* Color del texto dentro del corazón */
-    font-size: 1.5em;
-    font-weight: bold;
+    background-color: #fce4ec; /* Color rosa claro */
+    font-family: sans-serif;
+    color: #d81b60; /* Color rojo oscuro */
+    font-size: 3em;
     text-align: center;
-    width: 80%; /* Para que quepa bien el texto */
-    line-height: 1.2;
-    opacity: 0; /* Inicia invisible */
-    animation: fadeInText 1.5s forwards;
-    animation-delay: 2s; /* Aparece después del corazón */
+    margin: 0;
   }
-
-  .rose-and-kiss {
-    display: flex;
-    align-items: center;
-    font-size: 4em; /* Tamaño grande para la rosa y el beso */
-    margin-top: 20px; /* Espacio entre el corazón y la rosa */
-    opacity: 0; /* Inicia invisible */
-    animation: fadeInText 1.5s forwards;
-    animation-delay: 3.5s; /* Aparece después del texto del corazón */
-  }
-
-  @keyframes popIn {
-    0% { transform: scale(0); opacity: 0; }
-    80% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-
-  @keyframes fadeInText {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  /* Animación de dibujo del corazón (simulada con opacidad y escala) */
-  @keyframes drawHeart {
-    0% {
-      transform: rotate(-45deg) scale(0);
-      opacity: 0;
-    }
-    50% {
-      transform: rotate(-45deg) scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: rotate(-45deg) scale(1);
-      opacity: 1;
-    }
-  }
-
   .heart {
-    animation: drawHeart 1s ease-out forwards;
-    animation-delay: 0.5s;
+    color: red; /* Color del corazón */
+    font-size: 1.5em; /* Tamaño del corazón, un poco más grande que el texto */
+    margin-top: 20px; /* Espacio entre el texto y el corazón */
+  }
+  .rose {
+    margin-top: 10px; /* Espacio entre el corazón y la rosa */
+    font-size: 1.2em; /* Tamaño de la rosa */
   }
 </style>
 </head>
 <body>
 
-  <div class="heart-container">
-    <div class="heart"></div>
-    <div class="heart-text">TE AMO MAYUMI</div>
-  </div>
-
-  <div class="rose-and-kiss">
-    <span>🌹</span>
-    <span style="margin-left: 20px;">💋</span>
-  </div>
+<h1>TE AMO MAYUMI</h1>
+<div class="heart">❤️</div>
+<div class="rose">🌹</div>
 
 </body>
 </html>
